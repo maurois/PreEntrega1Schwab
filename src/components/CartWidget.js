@@ -5,11 +5,13 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const CartWidget = () => {
   return ( 
-    <Badge badgeContent={4} color="secondary">
+    
     <IconButton>
+      <Badge badgeContent={4} color="secondary">
         <ShoppingCartOutlinedIcon sx={{color:"white"}}/>
+      </Badge>
       </IconButton>
-  </Badge>
+
   );
 }
  
