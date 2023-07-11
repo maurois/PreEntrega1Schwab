@@ -8,8 +8,10 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { Button } from '@mui/material';
+import BasicMenu from './BasicMenu';
 
-const categories = ["categoria1", "categoria2", "categoria3"]
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -57,16 +59,8 @@ export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
+        <Toolbar>          
+          <BasicMenu/>
           <Typography
             variant="h6"
             noWrap
@@ -75,6 +69,7 @@ export default function NavBar() {
           >
             E-COMMERCE
           </Typography>
+          
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
